@@ -67,7 +67,6 @@ body{
 }
 
 /*--NAVIGATION MENU--*/
-/* QUESTION: Why it doesn't work?? */
 
 nav{
   background-color: firebrick;
@@ -76,20 +75,21 @@ nav{
   justify-content: space-between;
 }
 
-nav span{
-  dislay: none;
-}
-
-ul{
-  list-style: none;
+nav a {
+  color: white;
+  text-decoration: none;
   margin: 0;
 }
 
-li{
+nav p{
   display: inline-block;
-  padding: 0.75rem auto;
-  /*list-style: none;
-  color: white;*/
+  padding: 0.75rem 0;
+  justify-content: space-between;
+  color: white;
+}
+
+nav span{
+  display: none;
 }
 
 /*--PRODUCT GRID--*/
@@ -102,7 +102,7 @@ li{
 .product{
   display: flex;
   width: 30%;
-  height: 14rem; /*QUESTION: another way of doing it? Especially for the 3rd photo...*/
+  height: 15rem; /*QUESTION: another way of doing it? Especially for the 3rd photo...*/
   overflow: hidden;
   flex-direction: column;
   border: 4px solid black;
@@ -120,9 +120,8 @@ li{
 
 .product h5{
   background-color: black;
-  padding: 0.5rem auto; /*QUESTION: You can't see the padding*/
+  padding: 0.5rem 0;
   text-align: center;
-
 }
 
 /*--LOCATION AND HOURS--*/
@@ -163,13 +162,13 @@ p{
 /*--FOOTER--*/
 
 footer{
-  height: 5rem;
+  height: 10rem;
   width: 100%;
   background-color: black;
   /*justify-content: center;*/
 }
 footer h5{
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 /* Screens < 1024 pixels (Tablets) */
@@ -186,7 +185,14 @@ footer h5{
     margin-left: 0;
   }
 
-/*QUESTION: I need to change the nav to Menu*/
+nav span{
+  display: block;
+  margin: 0.75rem auto;
+}
+
+nav ul{
+  display: none;
+}
 
   .grid{
     margin: 3rem auto;
@@ -236,7 +242,19 @@ footer h5{
     font-size: 1rem;
   }
 
-  /*QUESTION: I need to change the nav to Menu*/
+  nav span{
+    display: block;
+    margin: 0.75rem auto;
+  }
+
+  nav ul{
+    display: none;
+  }
+
+  .grid{
+    justify-content: space-between;
+    margin: 3rem auto;
+  }
 
   .grid .product:nth-child(2){
     display: none;
