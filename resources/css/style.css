@@ -9,16 +9,16 @@ body{
 .container{
   display: flex;
   max-width: 960px;
-  margin: 0 auto; /*QUESTION: I don't know how to make it work*/
+  margin: 0 auto;
 }
 
-/*--LOGO--*/
+/*--HEADER--*/
 
-.logo{
+header{
   background-color: black;
   width: 100%;
-  padding-left: auto;
-  display: flex;
+  display: block;
+  margin: 0;
 }
 
 .logo img{
@@ -39,18 +39,19 @@ body{
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
   background-position: center;
   background-size: cover;
+  /*display: flex;
+  justify-content: flex-start;*/
 }
 
-.new{
+.box{
   height: 10rem;
   width: 25rem;
-  flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 9rem;
-  margin-left: 0;
   background-color: black;
 }
 
-.new h5{
+.box h5{
   font-size: 1rem;
   font-weight: bold;
   padding-top: 2rem;
@@ -58,20 +59,24 @@ body{
   text-align: left;
 }
 
-.new h1{
+.box h1{
   font-size: 2rem;
   font-weight: bold;
-  padding-top: 0.25rem;
+  padding-top: 0.75rem;
   padding-left: 3rem;
+  padding-bottom: 2rem;
   text-align: left;
 }
 
 /*--NAVIGATION MENU--*/
 
-nav{
+.menu{
   background-color: firebrick;
-  color: white;
   width: 100%;
+  display: block;
+}
+
+nav {
   justify-content: space-between;
 }
 
@@ -85,11 +90,11 @@ nav p{
   display: inline-block;
   padding: 0.75rem 0;
   justify-content: space-between;
-  color: white;
 }
 
 nav span{
   display: none;
+  color: white;
 }
 
 /*--PRODUCT GRID--*/
@@ -180,7 +185,7 @@ footer h5{
     margin: 0 auto;
   }
 
-  .new{
+  .box{
     margin-top: 9rem;
     margin-left: 0;
   }
@@ -190,7 +195,7 @@ nav span{
   margin: 0.75rem auto;
 }
 
-nav ul{
+nav p{
   display: none;
 }
 
@@ -226,18 +231,18 @@ nav ul{
     margin: 0 auto;
   }
 
-  .new{
+  .box{
     width: 100%;
     margin-top: 10rem;
     height: 5rem;
   }
 
-  .new h5{
+  .box h5{
     padding: 1rem 2rem;
     font-size: 0.77rem;
   }
 
-  .new h1{
+  .box h1{
     padding-left: 2rem;
     font-size: 1rem;
   }
@@ -247,7 +252,7 @@ nav ul{
     margin: 0.75rem auto;
   }
 
-  nav ul{
+  nav p{
     display: none;
   }
 
